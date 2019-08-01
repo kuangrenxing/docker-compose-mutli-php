@@ -1,9 +1,9 @@
 # docker-compose-mutli-php
 多版本php环境 php5.6 php7.1 php7.3
 
-放在/var/www/目录下
-
-├── compose_mutli_php
+## 放在/var/www/目录下
+```ini
+├── docker-compose-mutli-php
 │   ├── data
 │   │   ├── mysql
 │   │   └── redis
@@ -73,14 +73,21 @@
 │   └── index.php
 └── site73
     └── index.php
-
-
+```
+运行：注意加sudo
+```bash
+sudo docker-compose up
+```
 /etc/hosts
 添加
+```bash
 127.0.0.1 site56.test
 127.0.0.1 site71.test
 127.0.0.1 site73.test
-
-
-运行：注意加sudo
-sudo docker-compose up
+```
+在浏览器打开
+```bash
+http://site56.test
+http://site71.test
+http://site73.test
+```
